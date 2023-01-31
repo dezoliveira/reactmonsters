@@ -13,11 +13,11 @@ const MonsterCards = () => {
   })
 
   return (
-    <h1>
-     {
-      monsters.map((x) => x.name)
-     }
-    </h1>
+    <div>
+      {monsters.map(monster => (
+        <p> {monster.name} </p>
+      ))}
+    </div>
   )
 }
 
