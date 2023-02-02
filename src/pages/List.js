@@ -14,7 +14,6 @@ const List = () => {
 }
 
 const Container = styled.div`
-  max-width: 1vh;
   margin: 50px;
 `
 

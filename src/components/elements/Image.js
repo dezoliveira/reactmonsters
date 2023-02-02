@@ -17,7 +17,8 @@ const Image = ({tag}) => {
 
 const Container = styled.div`
   width: 400px;
-  && img{
+  
+  img{
     width: 100%;
   }
 `
