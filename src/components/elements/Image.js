@@ -3,8 +3,13 @@ import styled from "styled-components"
 const Image = ({tag}) => {
   return (
     <Container>
-      <img src={
-        process.env.PUBLIC_URL + `/images/monsters/${tag}.png`
+      <img
+      alt={
+        tag + "_img"
+      } 
+      src={
+        process.env.PUBLIC_URL 
+        + `/images/monsters/${tag}.png`
       }/>
     </Container>
   )
