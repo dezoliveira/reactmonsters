@@ -3,17 +3,15 @@ import styled from "styled-components"
 const Input = ({type, text}) => {
   return (
     <Container>
-      <div>
-        <label>{text} </label>
-        <input type={type}/>
-      </div>
+      <label>{text} </label>
+      <input type={type}/>
     </Container>
   )
 }
 
 export default Input
 
-const Container = styled.div`
+const Container = styled.span`
   text-align: center;
   margin-bottom: 80px;
 

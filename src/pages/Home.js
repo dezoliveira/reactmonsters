@@ -1,10 +1,12 @@
-import MonsterCards from "../components/store/MonsterCards"
-import styled from "styled-components"
+import Background from "../components/elements/Background"
+import Main from "../components/layout/Main"
 
 const Home = () => {
   return (
     <>
-      <h1>Home</h1>
+      <Background>
+        <h1>cuzin</h1>
+      </Background>
     </>
   )
 }

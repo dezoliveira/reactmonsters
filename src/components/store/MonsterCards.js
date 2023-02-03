@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react"
-
+import styled from "styled-components"
 import Image from "../elements/Image"
 import Input from "../elements/Input"
-
-import styled from "styled-components"
+import Button from "../elements/Button"
 
 const MonsterCards = () => {
 
@@ -23,12 +22,18 @@ const MonsterCards = () => {
     <>
       {
         isFetching ?
-          <Input 
-            type={"text"}
-            text={"Select a Monster: "}
-          />
+          <InputBox>
+            <Input 
+              type={"text"}
+              text={"Select a Monster: "}
+            />
+            <Button
+              text={"Search"}
+            />
+          </InputBox>
         : ''
       }
+          
       <Container>
         {monsters.map(monster => (
           <Card>
@@ -57,6 +62,11 @@ const Container = styled.div`
 const Card = styled.div`
   border:4px solid #006E51;
   padding: 40px;
+`
+
+const InputBox = styled.div`
+  text-align: center;
+  margin-bottom: 80px;
 `
 
 export default MonsterCards
