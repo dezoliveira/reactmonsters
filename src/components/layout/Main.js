@@ -1,9 +1,10 @@
 import styled from "styled-components"
-import Background from "../elements/Background"
+import Button from "../elements/Button"
 
 const Main = () => {
   return(
-    <></>
+    <>
+    </>
   )
 }
 

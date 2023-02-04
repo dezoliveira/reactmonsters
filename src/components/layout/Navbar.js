@@ -28,7 +28,7 @@ const Container = styled.div`
   justify-content: flex-start;
   background-color: #006E51;
   color: #f0f0f0;
-  height: 100px;
+  height: 50px;
 
   a {
     list-style: none;
