@@ -42,7 +42,16 @@ const Container = styled.div`
     gap: 15px;
     text-decoration: none;
     list-style: none;
-    font-size: 25px;
+    font-size: 16px;
+  }
+
+  li {
+    transition: 0.3s;
+
+    :hover {
+      font-weight: bold;
+      font-size: 18px;
+    }
   }
 `
 

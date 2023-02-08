@@ -13,6 +13,7 @@ const MonsterCards = () => {
     fetch("https://mhw-db.com/monsters/")
     .then((resp) => resp.json())
     .then((data) => {
+      console.log(data)
       setMonsters(data)
       setFetching(true);
     })
@@ -38,12 +39,19 @@ const MonsterCards = () => {
         {monsters.map(monster => (
           <Card>
             <div key={monster.id}>
-              <h2> {monster.name} </h2>
-              <h5> Type: {monster.type} / Species: {monster.species} / Elements: {monster.elements.length ? monster.elements :  'none'}</h5>
-              <span> Locations: <a href="/"> {monster.locations[0].name} </a> </span>
-              <span> <a href="/">{monster.locations.length > 1 ? " / " + monster.locations[1].name : ''}</a></span>
-              <p> {monster.description} </p>
-              <Image tag={monster.name} />
+              <CardHeader>
+                <Image tag={monster.name} />
+              </CardHeader>
+              <hr />
+              <CardTitle>
+                <h2> {monster.name} </h2>
+              </CardTitle>
+              <CardBody>
+                <h5> Type: {monster.type} / Species: {monster.species} / Elements: {monster.elements.length ? monster.elements :  'none'}</h5>
+                <span> Locations: <a href="/"> {monster.locations[0].name} </a> </span>
+                <span> <a href="/">{monster.locations.length > 1 ? " / " + monster.locations[1].name : ''}</a></span>
+                <p> {monster.description} </p>
+              </CardBody>
             </div>
           </Card>
         ))}
@@ -54,14 +62,42 @@ const MonsterCards = () => {
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: auto;
-  grid-gap: 4rem;
+  grid-gap: 6rem;
+
+  hr {
+    margin: 0;
+  }
 `
 
 const Card = styled.div`
-  border:4px solid #006E51;
-  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+
+  :hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transform: translateY(-15px);
+  }
+`
+
+const CardHeader = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background-color: #006E51;
+  border-radius: 10px 10px 0 0;
+`
+
+const CardTitle = styled.div`
+  text-align: center;
+  font-size: 25px;
+`
+
+const CardBody = styled.div`
+  padding: 0 15px;
 `
 
 const InputBox = styled.div`

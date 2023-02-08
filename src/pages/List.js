@@ -5,7 +5,6 @@ import MonsterCards from "../components/store/MonsterCards"
 const List = () => {
   return (
     <>    
-      <h1>List</h1>
       <Container>
         <MonsterCards />
       </Container>

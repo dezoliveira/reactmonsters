@@ -11,16 +11,19 @@ const Button = ({id, text}) => {
 }
 
 const Container = styled.span`
-  margin: 25px;
-
   button {
     padding: 12px 25px;
     background-color: #006E51;
     border: 2px solid #006E51;
     border-radius: 4px;
     color: #fff;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
+
+    :hover {
+      background-color: #00805E;
+      border-color: #00805E;
+    }
   }
 `
 

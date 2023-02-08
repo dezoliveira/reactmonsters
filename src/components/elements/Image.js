@@ -16,10 +16,14 @@ const Image = ({tag}) => {
 }
 
 const Container = styled.div`
-  width: 400px;
-  
+  background-color: aqua;
+
+  border-radius: 50%;
   img{
-    width: 100%;
+    width: 200px;
+    min-height: 200px;
+    max-height: 200px;
+    padding: 10px;
   }
 `
 
