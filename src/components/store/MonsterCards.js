@@ -40,7 +40,7 @@ const MonsterCards = () => {
           <Card>
             <div key={monster.id}>
               <CardHeader>
-                <Image tag={monster.name} />
+                <Image tag={monster.name} type={monster.elements.length ? monster.elements[0] : ''} />
               </CardHeader>
               <hr />
               <CardTitle>
