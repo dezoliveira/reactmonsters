@@ -32,7 +32,11 @@ const MonsterCards = () => {
               text={"Search"}
             />
           </InputBox>
-        : ''
+        : 
+        <Loading>
+          <img src="https://media.tenor.com/CyHKquZt2OYAAAAC/yes-oh.gif" />
+          <label>Loading...</label>
+        </Loading>
       }
           
       <Container>
@@ -59,6 +63,19 @@ const MonsterCards = () => {
     </>
   )
 }
+
+const Loading = styled.div`
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  label {
+    font-size: 60px;
+    color: #2F2F2F;
+  }
+`
 
 const Container = styled.div`
   display: grid;
