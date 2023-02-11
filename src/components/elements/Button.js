@@ -17,7 +17,7 @@ const Container = styled.span`
     border: 2px solid #006E51;
     border-radius: 4px;
     color: #fff;
-    font-size: 20px;
+    font-size: 17px;
     cursor: pointer;
 
     :hover {

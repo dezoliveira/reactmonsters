@@ -14,6 +14,7 @@ export default Input
 const Container = styled.span`
   text-align: center;
   margin-bottom: 80px;
+  margin: 0 30px 80px 20px;
 
   label {
     font-size: 20px;
