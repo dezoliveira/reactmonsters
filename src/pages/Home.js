@@ -17,24 +17,6 @@ const Container = styled.div`
   align-items: center;
   height: calc(100vh - 50px);
   width: 100%;
-
-  /* &&::after{
-    content: "";
-    background-color: black;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    z-index: -1;
-    height: 100vh;
-
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;   
-    position: fixed;
-    opacity: 0.3;
-  } */
 `
 
 const Image = styled.img`

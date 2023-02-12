@@ -17,7 +17,7 @@ const MonsterCards = () => {
       setMonsters(data)
       setFetching(true);
     })
-  })
+  }, [])
 
   return (
     <>
@@ -41,22 +41,20 @@ const MonsterCards = () => {
           
       <Container>
         {monsters.map(monster => (
-          <Card>
-            <div key={monster.id}>
-              <CardHeader>
-                <Image tag={monster.name} type={monster.elements.length ? monster.elements[0] : ''} />
-              </CardHeader>
-              <hr />
-              <CardTitle>
-                <h2> {monster.name} </h2>
-              </CardTitle>
-              <CardBody>
-                <h5> Type: {monster.type} / Species: {monster.species} / Elements: {monster.elements.length ? monster.elements :  'none'}</h5>
-                <span> Locations: <a href="/"> {monster.locations[0].name} </a> </span>
-                <span> <a href="/">{monster.locations.length > 1 ? " / " + monster.locations[1].name : ''}</a></span>
-                <p> {monster.description} </p>
-              </CardBody>
-            </div>
+          <Card key={monster.id}>
+            <CardHeader>
+              <Image tag={monster.name} type={monster.elements.length ? monster.elements[0] : ''} />
+            </CardHeader>
+            <hr />
+            <CardTitle>
+              <h2> {monster.name} </h2>
+            </CardTitle>
+            <CardBody>
+              <h5> Type: {monster.type} / Species: {monster.species} / Elements: {monster.elements.length ? monster.elements :  'none'}</h5>
+              <span> Locations: <a href="/"> {monster.locations[0].name} </a> </span>
+              <span> <a href="/">{monster.locations.length > 1 ? " / " + monster.locations[1].name : ''}</a></span>
+              <p> {monster.description} </p>
+            </CardBody>
           </Card>
         ))}
       </Container>
