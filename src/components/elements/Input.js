@@ -1,10 +1,15 @@
 import styled from "styled-components"
 
-const Input = ({type, text}) => {
+const Input = ({type, text, onChange}) => {
   return (
     <Container>
       <label>{text} </label>
-      <input type={type}/>
+      <input 
+        type={type} 
+        onChange={(e) => {
+          onChange(e)
+        }}
+      />
     </Container>
   )
 }

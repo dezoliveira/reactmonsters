@@ -1,9 +1,11 @@
 import styled from "styled-components"
 
-const Button = ({id, text}) => {
+const Button = ({id, text, value}) => {
   return (
     <Container>
-      <button id={id}>
+      <button 
+        id={id}
+      >
         {text}
       </button>
     </Container>

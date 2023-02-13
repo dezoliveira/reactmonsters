@@ -8,16 +8,22 @@ const MonsterCards = () => {
 
   const [monsters, setMonsters] = useState([])
   const [isFetching, setFetching] = useState(false)
+  const [inputText, setInputText] = useState([])
 
   useEffect(() => {
-    fetch("https://mhw-db.com/monsters/")
+    fetch(`https://mhw-db.com/monsters/${inputText}`)
     .then((resp) => resp.json())
     .then((data) => {
       console.log(data)
       setMonsters(data)
       setFetching(true);
     })
-  }, [])
+  }, [inputText])
+
+  const handleClick = (e) => {
+    setInputText(e.target.value)
+  }
+  
 
   return (
     <>
@@ -27,6 +33,7 @@ const MonsterCards = () => {
             <Input 
               type={"text"}
               text={"Select a Monster: "}
+              onChange={handleClick}
             />
             <Button
               text={"Search"}
