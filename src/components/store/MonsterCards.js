@@ -5,7 +5,6 @@ import Input from "../elements/Input"
 import Button from "../elements/Button"
 
 const MonsterCards = () => {
-
   const [monsters, setMonsters] = useState([])
   const [isFetching, setFetching] = useState(false)
   const [inputText, setInputText] = useState([])
@@ -20,11 +19,10 @@ const MonsterCards = () => {
     })
   }, [inputText])
 
-  const handleClick = (e) => {
+  const handleChange = (e) => {
     setInputText(e.target.value)
   }
   
-
   return (
     <>
       {
@@ -33,7 +31,7 @@ const MonsterCards = () => {
             <Input 
               type={"text"}
               text={"Select a Monster: "}
-              onChange={handleClick}
+              onChange={handleChange}
             />
             <Button
               text={"Search"}
@@ -45,26 +43,45 @@ const MonsterCards = () => {
           <label>Loading...</label>
         </Loading>
       }
-          
-      <Container>
-        {monsters.map(monster => (
-          <Card key={monster.id}>
-            <CardHeader>
-              <Image tag={monster.name} type={monster.elements.length ? monster.elements[0] : ''} />
-            </CardHeader>
-            <hr />
-            <CardTitle>
-              <h2> {monster.name} </h2>
-            </CardTitle>
-            <CardBody>
-              <h5> Type: {monster.type} / Species: {monster.species} / Elements: {monster.elements.length ? monster.elements :  'none'}</h5>
-              <span> Locations: <a href="/"> {monster.locations[0].name} </a> </span>
-              <span> <a href="/">{monster.locations.length > 1 ? " / " + monster.locations[1].name : ''}</a></span>
-              <p> {monster.description} </p>
-            </CardBody>
-          </Card>
-        ))}
-      </Container>
+
+      {
+        monsters.length ?
+          <>
+            <Container>
+              {
+                monsters.map(monster => (
+                  <Card key={monster.id}>
+                    <CardHeader>
+                      <Image tag={monster.name} type={monster.elements.length ? monster.elements[0] : ''} />
+                    </CardHeader>
+                    <hr />
+                    <CardTitle>
+                      <h2> {monster.name} </h2>
+                    </CardTitle>
+                    <CardBody>
+                      <h5> Type: {monster.type} / Species: {monster.species} / Elements: {monster.elements.length ? monster.elements :  'none'}</h5>
+                      <span> Locations: <a href="/"> {monster.locations[0].name} </a> </span>
+                      <span> <a href="/">{monster.locations.length > 1 ? " / " + monster.locations[1].name : ''}</a></span>
+                      <p> {monster.description} </p>
+                    </CardBody>
+                  </Card>
+                ))
+              }
+            </Container>
+          </> 
+          : 
+          <Container2>
+            <Card key={monsters.id}>
+              <CardHeader>
+                <Image tag={monsters.name} type={monsters.elements ? monsters.elements[0] : ''} />
+              </CardHeader>
+              <hr />
+              <CardTitle>
+                <h2> {monsters.name} </h2>
+              </CardTitle>
+            </Card>
+          </Container2>
+      }
     </>
   )
 }
@@ -84,9 +101,20 @@ const Loading = styled.div`
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: auto;
   grid-gap: 6rem;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  hr {
+    margin: 0;
+  }
+`
+
+const Container2 = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   hr {
     margin: 0;
@@ -97,7 +125,7 @@ const Card = styled.div`
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-
+  width: 380px;
   :hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     transform: translateY(-15px);
