@@ -20,7 +20,19 @@ const MonsterCards = () => {
   }, [inputText])
 
   const handleChange = (e) => {
-    setInputText(e.target.value)
+      let monster = e.target.value
+      let filter = null
+      if (monsters.length){
+        filter = 
+          monsters.filter(
+            x => x.name.toLowerCase() === monster.toLowerCase()
+          )
+      }
+      setInputText(
+        filter !== null ? 
+          filter[0].id 
+        : e.target.value
+      )
   }
   
   return (
@@ -32,9 +44,6 @@ const MonsterCards = () => {
               type={"text"}
               text={"Select a Monster: "}
               onChange={handleChange}
-            />
-            <Button
-              text={"Search"}
             />
           </InputBox>
         : 
@@ -70,17 +79,19 @@ const MonsterCards = () => {
             </Container>
           </> 
           : 
-          <Container2>
-            <Card key={monsters.id}>
-              <CardHeader>
-                <Image tag={monsters.name} type={monsters.elements ? monsters.elements[0] : ''} />
-              </CardHeader>
-              <hr />
-              <CardTitle>
-                <h2> {monsters.name} </h2>
-              </CardTitle>
-            </Card>
-          </Container2>
+          isFetching ?
+            <Container2>
+              <Card key={monsters.id}>
+                <CardHeader>
+                  <Image tag={monsters.name} type={monsters.elements ? monsters.elements[0] : ''} />
+                </CardHeader>
+                <hr />
+                <CardTitle>
+                  <h2> {monsters.name} </h2>
+                </CardTitle>
+              </Card>
+            </Container2>
+          : <></>
       }
     </>
   )
