@@ -31,6 +31,6 @@ const Container = styled.span`
     border: 2px solid #006E51;
     border-radius: 4px;
     font-size: 16px;
-    padding: 12px 20px 12px 40px;
+    padding: 12px 20px 12px 20px;
   }
 `

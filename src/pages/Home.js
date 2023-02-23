@@ -20,13 +20,17 @@ const Container = styled.div`
 `
 
 const Image = styled.img`
-  background-image: url("https://images3.alphacoders.com/105/1054347.jpg");
+
   background-size: cover;
   height: calc(100vh - 50px);
   width: 100%;
   position: absolute;
   z-index: -1;
-  opacity: 0.5;
+  
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url("https://images5.alphacoders.com/634/634437.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 `
 
 export default Home

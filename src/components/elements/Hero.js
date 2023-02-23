@@ -6,7 +6,7 @@ import styled from "styled-components"
 const Hero = () => {
   return (
     <Container>
-      <h1>Welcome to Monster Hunter World's Briefing</h1>
+      <h1>Welcome to Hunter's Bestiary!</h1>
       <p>
         If you're a hunter, you are in the right place!<br/>
         Here you can see all the monster's from Monster Hunter World<br/>
@@ -26,16 +26,20 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 100px 0 25px 0;
+  padding-top: 40px;
+  gap: 50px;
 
   h1 {
     font-size: 60px;
-
+    color: #96965E;
+    margin: 0;
   }
 
   p {
     font-size: 25px;
     text-align: justify;
+    color: white;
+    margin: 0;
   }
 `
 
