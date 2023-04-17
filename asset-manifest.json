@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/reacthunter/static/css/main.552dcd6c.css",
-    "main.js": "/reacthunter/static/js/main.6f5ed610.js",
-    "static/js/787.562b7026.chunk.js": "/reacthunter/static/js/787.562b7026.chunk.js",
-    "index.html": "/reacthunter/index.html",
-    "main.552dcd6c.css.map": "/reacthunter/static/css/main.552dcd6c.css.map",
-    "main.6f5ed610.js.map": "/reacthunter/static/js/main.6f5ed610.js.map",
-    "787.562b7026.chunk.js.map": "/reacthunter/static/js/787.562b7026.chunk.js.map"
+    "main.css": "/reactmonsters/static/css/main.552dcd6c.css",
+    "main.js": "/reactmonsters/static/js/main.645e5f53.js",
+    "static/js/787.562b7026.chunk.js": "/reactmonsters/static/js/787.562b7026.chunk.js",
+    "index.html": "/reactmonsters/index.html",
+    "main.552dcd6c.css.map": "/reactmonsters/static/css/main.552dcd6c.css.map",
+    "main.645e5f53.js.map": "/reactmonsters/static/js/main.645e5f53.js.map",
+    "787.562b7026.chunk.js.map": "/reactmonsters/static/js/787.562b7026.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.552dcd6c.css",
-    "static/js/main.6f5ed610.js"
+    "static/js/main.645e5f53.js"
   ]
 }
