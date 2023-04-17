@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/reacthunter/static/css/main.552dcd6c.css",
+    "main.js": "/reacthunter/static/js/main.6f5ed610.js",
+    "static/js/787.562b7026.chunk.js": "/reacthunter/static/js/787.562b7026.chunk.js",
+    "index.html": "/reacthunter/index.html",
+    "main.552dcd6c.css.map": "/reacthunter/static/css/main.552dcd6c.css.map",
+    "main.6f5ed610.js.map": "/reacthunter/static/js/main.6f5ed610.js.map",
+    "787.562b7026.chunk.js.map": "/reacthunter/static/js/787.562b7026.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.552dcd6c.css",
+    "static/js/main.6f5ed610.js"
+  ]
+}
