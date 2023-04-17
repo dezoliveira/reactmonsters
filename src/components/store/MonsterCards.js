@@ -14,7 +14,6 @@ const MonsterCards = () => {
     fetch(`https://mhw-db.com/monsters/${inputText}`)
     .then((resp) => resp.json())
     .then((data) => {
-      console.log(data)
       setMonsters(data)
       setFetching(true);
     })
