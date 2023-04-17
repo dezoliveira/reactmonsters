@@ -20,7 +20,6 @@ const Container = styled.div`
 `
 
 const Image = styled.img`
-
   background-size: cover;
   height: calc(100vh - 50px);
   width: 100%;
