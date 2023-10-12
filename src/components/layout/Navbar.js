@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom'
-
 import styled from 'styled-components'
 
 const Navbar = () => {
   return(
     <Container>
+      <span>
+        <img src={process.env.PUBLIC_URL + "/images/backgrounds/Logo.png"} alt='logo' />
+        <h1>Monster Hunter</h1>
+      </span>
       <nav>
         <ul>
           <li>
@@ -25,10 +28,22 @@ const Navbar = () => {
 const Container = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
+  padding: 0 25px;
   background-color: #006E51;
   color: #f0f0f0;
-  height: 50px;
+  height: 60px;
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  img {
+    width: 50px;
+  }
 
   a {
     list-style: none;
@@ -47,10 +62,11 @@ const Container = styled.div`
 
   li {
     transition: 0.3s;
+    font-size: 20px;
 
     :hover {
       font-weight: bold;
-      font-size: 18px;
+      font-size: 25px;
     }
   }
 `

@@ -18,8 +18,8 @@ const Cards = ({data}) => {
           Elements: {
             data.elements.length ?
             <>
-              <a href="https://monsterhunterworld.wiki.fextralife.com/Elemental+Resistances" target="_blank">
-                <img 
+              <a href="https://monsterhunterworld.wiki.fextralife.com/Elemental+Resistances" target="_blank" rel="noreferrer">
+                <img alt="" 
                   src={
                     data.elements.length > 2 ? 
                       process.env.PUBLIC_URL + '/images/elements/' + data.elements[0] + '.png'

@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "MonsterHunter";
+  src: url("./MonsterHunter.ttf");
+}
+
+@font-face {
+  font-family: "MonsterHunterBold";
+  src: url("./MonsterHunter_Bold.ttf");
+}

@@ -9,4 +9,12 @@ body {
   position: relative;
 }
 
+h1 {
+  font-family: 'MonsterHunterBold', sans-serif;
+}
+
+h2 {
+  font-family: 'MonsterHunter', sans-serif;
+}
+
 

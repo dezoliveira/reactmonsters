@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react"
 import styled from "styled-components"
-import Image from "../elements/Image"
 import Input from "../elements/Input"
 import Cards from "../elements/Cards"
 import CardsList from "../elements/CardsList"
@@ -48,8 +47,8 @@ const MonsterCards = () => {
           </InputBox>
         : 
         <Loading>
-          <img src="https://media.tenor.com/CyHKquZt2OYAAAAC/yes-oh.gif" />
-          <label>Loading...</label>
+          <img src={process.env.PUBLIC_URL + "/images/backgrounds/loading.gif"} alt="monster_gif"/>
+          <h2>Loading...</h2>
         </Loading>
       }
 
@@ -59,10 +58,7 @@ const MonsterCards = () => {
             <Container>
               {
                 monsters.map(monster => (
-                  <CardsList
-                  data={monster}>
-                    
-                  </CardsList>
+                  <CardsList data={monster}/>
                 ))
               }
             </Container>
@@ -70,11 +66,7 @@ const MonsterCards = () => {
           : 
           isFetching ?
             <Container2>
-              <Cards
-                data={monsters}
-              >
-                
-              </Cards>
+              <Cards data={monsters}/>
             </Container2>
           : <></>
       }
@@ -89,9 +81,9 @@ const Loading = styled.div`
   align-items: center;
   justify-content: center;
 
-  label {
+  h2 {
     font-size: 60px;
-    color: #2F2F2F;
+    color: black;
   }
 `
 

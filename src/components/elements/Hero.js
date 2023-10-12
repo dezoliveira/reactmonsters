@@ -30,7 +30,7 @@ const Container = styled.div`
   gap: 50px;
 
   h1 {
-    font-size: 60px;
+    font-size: 80px;
     color: #96965E;
     margin: 0;
   }
